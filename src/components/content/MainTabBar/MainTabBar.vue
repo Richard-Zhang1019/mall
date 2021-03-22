@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <router-view></router-view>
     <tab-bar>
       <tab-bar-item path="/home" activeColor="rgb(212,35,122)">
         <template v-slot:item-icon>

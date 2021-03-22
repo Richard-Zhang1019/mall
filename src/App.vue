@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <!-- <router-view></router-view> -->
-    <main-tab-bar></main-tab-bar>
+    <keep-alive exclude="Detail">
+      <router-view></router-view>
+    </keep-alive>
+    <main-tab-bar class="tabbar"></main-tab-bar>
   </div>
 </template>
 
@@ -18,5 +20,7 @@ import MainTabBar from 'components/content/MainTabBar/MainTabBar'
 
 <style>
 @import 'assets/css/base.css';
-
+.tabbar{
+  z-index: 99999;
+}
 </style>

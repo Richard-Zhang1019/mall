@@ -14,5 +14,11 @@ module.exports={
     .set('views',resolve('./src/views'))
     .set('network',resolve('./src/network'))
     //注意 store 和 router 没必要配置　
+  },
+  pluginOptions: { // 第三方插件配置
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [path.resolve(__dirname, './src/assets/css/base.less')] // less所在文件路径
+    }
   }
 }
